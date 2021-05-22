@@ -1,5 +1,5 @@
 import datetime
-start_time = datetime.datetime.now()
+import random
 
 
 def heapify(arr, n, i):
@@ -32,11 +32,11 @@ def heapSort(arr):
         heapify(arr, i, 0)
 
 
-arr = [14, 26, 2, 8, 13, 30, 22, 1, 24, 55, 78, 6, 444, 242, 567, 7, 44,
-       33, 242, 111, 112, 114, 5557, 8, 999, 99, 15, 28, 29, 47, 84, 39, 31, 41, 32, 42, 51, 52, 58, 56, 67, 68, 622, 62, 54, 48, 21, 78]
+arr = [random.randint(1, 50000) for _ in range(50000)]
 n = len(arr)
+start_time = datetime.datetime.now()
 heapSort(arr)
-print(arr)
 end_time = datetime.datetime.now()
 elapsed_time = end_time - start_time
-print(elapsed_time, ":", elapsed_time.microseconds)
+print(elapsed_time.seconds, ":", elapsed_time.microseconds)
+start_time = datetime.datetime.now()
