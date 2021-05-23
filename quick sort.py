@@ -27,3 +27,9 @@ quick_sort(arr3, 0, len(arr3)-1)
 end_time = datetime.datetime.now()
 elapsed_time = end_time - start_time
 print(elapsed_time.seconds, ".", elapsed_time.microseconds)
+arr3.reverse()
+start_time = datetime.datetime.now()
+quick_sort(arr3, 0, len(arr3)-1)
+end_time = datetime.datetime.now()
+elapsed_time = end_time - start_time
+print(elapsed_time.seconds, ".", elapsed_time.microseconds)
